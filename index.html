@@ -13,10 +13,18 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #FFD700;
+            --light: #ffffff;
+            --dark: #0a192f;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
-            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--primary));
+            color: var(--light);
             overflow-x: hidden;
             min-height: 100vh;
             position: relative;
@@ -42,7 +50,7 @@
 
         /* Header Styles */
         header {
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -70,17 +78,37 @@
             animation: fadeIn 1s ease-in;
         }
 
+        .logo-image {
+            height: 70px;
+            margin-right: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-image img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
         .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            color: #fff;
+            color: var(--light);
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
             position: relative;
         }
 
         .logo-text span {
-            color: #FFD700;
+            color: var(--accent);
         }
 
         .logo-text::after {
@@ -90,7 +118,7 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, #FFD700, #FFA500, transparent);
+            background: linear-gradient(90deg, var(--accent), #FFA500, transparent);
             border-radius: 3px;
         }
 
@@ -101,7 +129,7 @@
         }
 
         .contact-info a {
-            color: #FFD700;
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.2rem;
@@ -112,7 +140,7 @@
         }
 
         .contact-info a:hover {
-            color: #fff;
+            color: var(--light);
             transform: translateX(5px);
         }
 
@@ -166,7 +194,7 @@
         }
 
         .hero h1 span {
-            color: #FFD700;
+            color: var(--accent);
             position: relative;
         }
 
@@ -180,8 +208,8 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #FFA500, #FFD700);
-            color: #0a192f;
+            background: linear-gradient(45deg, #FFA500, var(--accent));
+            color: var(--dark);
             padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
@@ -198,7 +226,7 @@
         .cta-button:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(255, 165, 0, 0.6);
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+            background: linear-gradient(45deg, var(--accent), #FFA500);
         }
 
         .hero-image {
@@ -233,7 +261,7 @@
         .section-title h2 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
-            color: #FFD700;
+            color: var(--accent);
             display: inline-block;
             position: relative;
         }
@@ -246,7 +274,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #FFA500, #FFD700);
+            background: linear-gradient(90deg, #FFA500, var(--accent));
             border-radius: 2px;
         }
 
@@ -295,7 +323,7 @@
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            color: #FFD700;
+            color: var(--accent);
             background: rgba(0, 0, 0, 0.2);
         }
 
@@ -306,7 +334,7 @@
         .service-content h3 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            color: #FFD700;
+            color: var(--accent);
         }
 
         .service-content p {
@@ -337,7 +365,7 @@
 
         .testimonial-card .quote {
             font-size: 5rem;
-            color: #FFD700;
+            color: var(--accent);
             opacity: 0.2;
             line-height: 0.8;
             margin-bottom: 20px;
@@ -361,11 +389,11 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 15px;
-            border: 2px solid #FFD700;
+            border: 2px solid var(--accent);
         }
 
         .client-info h4 {
-            color: #FFD700;
+            color: var(--accent);
             margin-bottom: 5px;
         }
 
@@ -404,7 +432,7 @@
         .contact-info h3 {
             font-size: 2.2rem;
             margin-bottom: 30px;
-            color: #FFD700;
+            color: var(--accent);
             position: relative;
             display: inline-block;
         }
@@ -416,7 +444,7 @@
             left: 0;
             width: 60%;
             height: 3px;
-            background: linear-gradient(90deg, #FFA500, #FFD700);
+            background: linear-gradient(90deg, #FFA500, var(--accent));
         }
 
         .contact-details {
@@ -437,7 +465,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            color: #FFD700;
+            color: var(--accent);
             margin-right: 20px;
             flex-shrink: 0;
         }
@@ -445,7 +473,7 @@
         .contact-text h4 {
             font-size: 1.3rem;
             margin-bottom: 5px;
-            color: #FFD700;
+            color: var(--accent);
         }
 
         .contact-text p, .contact-text a {
@@ -455,7 +483,7 @@
         }
 
         .contact-text a:hover {
-            color: #FFD700;
+            color: var(--accent);
         }
 
         .map {
@@ -504,14 +532,14 @@
             height: 45px;
             border-radius: 50%;
             background: rgba(255, 215, 0, 0.1);
-            color: #FFD700;
+            color: var(--accent);
             font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
         .social-icons a:hover {
-            background: #FFD700;
-            color: #0a192f;
+            background: var(--accent);
+            color: var(--dark);
             transform: translateY(-5px);
         }
 
@@ -550,6 +578,10 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .logo {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
             .contact-info {
                 align-items: center;
                 margin-top: 15px;
@@ -566,17 +598,27 @@
             .hero-image {
                 display: none;
             }
+            .logo-image {
+                height: 60px;
+                margin-right: 10px;
+            }
+            .logo-text {
+                font-size: 1.6rem;
+            }
         }
 
         @media (max-width: 480px) {
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
             .hero h1 {
                 font-size: 2.3rem;
             }
             .section-title h2 {
                 font-size: 2.2rem;
+            }
+            .contact-info a {
+                font-size: 1rem;
             }
         }
     </style>
@@ -586,6 +628,10 @@
     <header>
         <div class="container header-container">
             <div class="logo">
+                <div class="logo-image">
+                    <!-- The company image will be used here -->
+                    <img src="2.jpg" alt="Lia Tours & Travels">
+                </div>
                 <div class="logo-text">Lia <span>Tours & Travels</span></div>
             </div>
             <div class="contact-info">
